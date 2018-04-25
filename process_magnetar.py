@@ -214,7 +214,7 @@ for freq in sorted(FREQS.keys()):
 	if 'ON' in src or 'OFF' in src:
 	  if 'NGC' in src and 'ON' in src:
 	    cmd = "pam --type FluxCalOn -e pcal  %s"%(os.path.join(timingdir, src)+ '_%s.ar'%freq)
-	  elif 'NGC' in src and 'ON' in src:
+	  elif 'NGC' in src and 'OFF' in src:
 	    cmd = "pam --type FluxCalOff -e pcal  %s"%(os.path.join(timingdir, src)+ '_%s.ar'%freq)
 	  else:
 	    cmd = "pam --type PolnCal -e pcal  %s"%(os.path.join(timingdir, src)+ '_%s.ar'%freq)
